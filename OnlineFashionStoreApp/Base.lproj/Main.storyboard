@@ -23,84 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EfC-lX-4dl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="154" y="442"/>
-        </scene>
-        <!--Black Star Wear-->
-        <scene sceneID="yYM-uo-UhF">
-            <objects>
-                <viewController id="Ghs-KW-Se1" customClass="CategoriesViewController" customModule="OnlineFashionStoreApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PWM-mN-gyh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Iaq-Al-wOo">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="w39-jm-ELt">
-                                    <size key="itemSize" width="317" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="1ns-41-2cK" customClass="CategoryCollectionViewCell" customModule="OnlineFashionStoreApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bwa-vl-itv">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vR9-7G-S4v">
-                                                    <rect key="frame" x="16" y="4" width="66" height="66"/>
-                                                    <color key="backgroundColor" red="0.7763277556" green="0.51946509279999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="vR9-7G-S4v" secondAttribute="height" multiplier="33:33" id="EU7-dz-hsN"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNJ-XV-J0E">
-                                                    <rect key="frame" x="102" y="26.5" width="44" height="21.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="vR9-7G-S4v" firstAttribute="top" secondItem="bwa-vl-itv" secondAttribute="top" constant="4" id="3Jc-i2-MI1"/>
-                                                <constraint firstAttribute="bottom" secondItem="vR9-7G-S4v" secondAttribute="bottom" constant="4" id="7QU-jy-zib"/>
-                                                <constraint firstItem="vR9-7G-S4v" firstAttribute="centerY" secondItem="bwa-vl-itv" secondAttribute="centerY" id="Hys-pF-F2Y"/>
-                                                <constraint firstItem="BNJ-XV-J0E" firstAttribute="centerY" secondItem="bwa-vl-itv" secondAttribute="centerY" id="gGE-cJ-zff"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BNJ-XV-J0E" secondAttribute="trailing" constant="20" symbolic="YES" id="mP6-Cq-h4N"/>
-                                                <constraint firstItem="BNJ-XV-J0E" firstAttribute="leading" secondItem="vR9-7G-S4v" secondAttribute="trailing" constant="20" id="qWk-Il-hfR"/>
-                                                <constraint firstItem="vR9-7G-S4v" firstAttribute="leading" secondItem="bwa-vl-itv" secondAttribute="leading" constant="16" id="x2a-Ni-GDF"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <size key="customSize" width="320" height="74"/>
-                                        <connections>
-                                            <outlet property="categoryImageView" destination="vR9-7G-S4v" id="0ij-zC-Rpc"/>
-                                            <outlet property="nameLabel" destination="BNJ-XV-J0E" id="9QB-fv-Pam"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="frv-9x-JpD"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Iaq-Al-wOo" secondAttribute="bottom" id="AJb-ik-dP0"/>
-                            <constraint firstItem="Iaq-Al-wOo" firstAttribute="top" secondItem="PWM-mN-gyh" secondAttribute="top" id="L5q-Nx-4cA"/>
-                            <constraint firstItem="Iaq-Al-wOo" firstAttribute="trailing" secondItem="frv-9x-JpD" secondAttribute="trailing" id="bqM-DZ-TnT"/>
-                            <constraint firstItem="Iaq-Al-wOo" firstAttribute="leading" secondItem="frv-9x-JpD" secondAttribute="leading" id="rZx-fV-KTW"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Black Star Wear" largeTitleDisplayMode="always" id="Yl7-A4-3hD"/>
-                    <connections>
-                        <outlet property="collectionView" destination="Iaq-Al-wOo" id="u25-JI-nXp"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="p02-Cn-JMI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1151.25" y="-271.47887323943661"/>
+            <point key="canvasLocation" x="1151.25" y="441.54929577464787"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="bhL-wo-0Ia">
@@ -112,7 +35,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Zzx-y4-pil" kind="relationship" relationship="viewControllers" id="0bz-cp-X4a"/>
+                        <segue destination="n1h-XO-Jti" kind="relationship" relationship="viewControllers" id="Clr-sR-3Xx"/>
                         <segue destination="d3p-7r-OM1" kind="relationship" relationship="viewControllers" id="wYB-Kw-Cez"/>
                     </connections>
                 </tabBarController>
@@ -120,24 +43,87 @@
             </objects>
             <point key="canvasLocation" x="-733" y="32"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="W5l-a4-e0B">
+        <!--Black Star Wear-->
+        <scene sceneID="Fo0-Le-IE3">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zzx-y4-pil" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="dWU-dB-DcV"/>
+                <collectionViewController id="dsO-Uq-THu" customClass="CategoriesCollectionViewController" customModule="OnlineFashionStoreApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="nbq-x8-Uqg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fXK-kN-m8Z">
+                            <size key="itemSize" width="211" height="68"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CategoryCell" id="iZd-aV-Cx3" customClass="CategoryCollectionViewCell" customModule="OnlineFashionStoreApp" customModuleProvider="target">
+                                <rect key="frame" x="54.5" y="0.0" width="211" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tRb-FM-F1R">
+                                    <rect key="frame" x="0.0" y="0.0" width="211" height="68"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="edk-kp-KQM" customClass="CustomImageView" customModule="OnlineFashionStoreApp" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="4" width="60" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="OfD-Ko-j90"/>
+                                                <constraint firstAttribute="width" constant="60" id="Unl-0L-7p1"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKe-de-bBc">
+                                            <rect key="frame" x="96" y="22" width="48" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="iKe-de-bBc" firstAttribute="leading" secondItem="edk-kp-KQM" secondAttribute="trailing" constant="16" id="JQv-qe-0f7"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iKe-de-bBc" secondAttribute="trailing" constant="20" symbolic="YES" id="W51-tB-6zP"/>
+                                        <constraint firstItem="edk-kp-KQM" firstAttribute="leading" secondItem="tRb-FM-F1R" secondAttribute="leading" constant="20" id="Xd8-Fr-4oj"/>
+                                        <constraint firstItem="edk-kp-KQM" firstAttribute="centerY" secondItem="tRb-FM-F1R" secondAttribute="centerY" id="f7f-in-KY6"/>
+                                        <constraint firstItem="iKe-de-bBc" firstAttribute="centerY" secondItem="tRb-FM-F1R" secondAttribute="centerY" id="saT-mj-ScA"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="customSize" width="211" height="68"/>
+                                <connections>
+                                    <outlet property="categoryImageView" destination="edk-kp-KQM" id="43Q-j1-z4g"/>
+                                    <outlet property="nameLabel" destination="iKe-de-bBc" id="KMn-9t-Nrn"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="dsO-Uq-THu" id="Li6-db-AEF"/>
+                            <outlet property="delegate" destination="dsO-Uq-THu" id="K39-WB-Ncc"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Black Star Wear" largeTitleDisplayMode="always" id="ecQ-Kr-Xb4"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WSX-cz-6ND" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1147.5" y="-213.38028169014083"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="orH-HI-XMv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n1h-XO-Jti" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="K4V-K3-i2x"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="q8b-Bq-Msf">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="M1v-FR-xSM">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Ghs-KW-Se1" kind="relationship" relationship="rootViewController" id="roc-ue-zmm"/>
+                        <segue destination="dsO-Uq-THu" kind="relationship" relationship="rootViewController" id="ua4-yU-dVS"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tNe-rS-0wT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jzM-rF-zW1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="153.75" y="-271.47887323943661"/>
+            <point key="canvasLocation" x="150" y="-213.38028169014083"/>
         </scene>
     </scenes>
     <resources>
