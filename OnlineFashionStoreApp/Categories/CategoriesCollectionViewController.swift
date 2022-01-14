@@ -24,12 +24,18 @@ class CategoriesCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
 
         viewModel = CategoryListViewModel()
+        title = "Black Star Wear"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let subcategoriesVC = segue.destination as! SubcategoriesTableViewController
+        subcategoriesVC.viewModel = sender as? SubcategoriesViewModelProtocol
     }
 }
 
 extension CategoriesCollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.getNumberOfRows()
+        viewModel.getNumberOfItems()
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -39,9 +45,17 @@ extension CategoriesCollectionViewController {
     }
 }
 
+extension CategoriesCollectionViewController {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        let subcategory = viewModel.getSubcategoryViewModel(at: indexPath)
+    performSegue(withIdentifier: segueIdentifier, sender: subcategory)
+    }
+}
+
 extension CategoriesCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: UIScreen.main.bounds.width, height: 100)
+        CGSize(width: UIScreen.main.bounds.width - 32, height: 100)
     }
 }
 

@@ -11,9 +11,9 @@ protocol CategoryViewModelProtocol {
     
     var categories: [Category] { get }
     func fetchData(completion: @escaping() -> Void)
-    func getNumberOfRows() -> Int
+    func getNumberOfItems() -> Int
     func getCellViewModel(at indexPath: IndexPath) -> CategoryCellViewModelProtocol
-//    func getSubcategoryViewModel(at indexPath: IndexPath) -> SubcategoriesViewModelProtocol
+    func getSubcategoryViewModel(at indexPath: IndexPath) -> SubcategoriesViewModelProtocol
 }
 
 class CategoryListViewModel: CategoryViewModelProtocol {
@@ -27,7 +27,7 @@ class CategoryListViewModel: CategoryViewModelProtocol {
         }
     }
     
-    func getNumberOfRows() -> Int {
+    func getNumberOfItems() -> Int {
         categories.count
     }
     
@@ -36,9 +36,8 @@ class CategoryListViewModel: CategoryViewModelProtocol {
         return CategoryCellViewModel(category: category)
     }
     
-//    func getSubcategoryViewModel(at indexPath: IndexPath) -> SubcategoriesViewModelProtocol {
-//        let subcategory = categories[indexPath.row]
-//        return SubcategoriesViewModel(category: subcategory)
-//    }
-    
+    func getSubcategoryViewModel(at indexPath: IndexPath) -> SubcategoriesViewModelProtocol {
+        let subcategory = categories[indexPath.row]
+        return SubcategoriesViewModel(category: subcategory)
+    }
 }

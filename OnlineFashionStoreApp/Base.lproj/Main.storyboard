@@ -43,7 +43,7 @@
             </objects>
             <point key="canvasLocation" x="-733" y="32"/>
         </scene>
-        <!--Black Star Wear-->
+        <!--Categories Collection View Controller-->
         <scene sceneID="Fo0-Le-IE3">
             <objects>
                 <collectionViewController id="dsO-Uq-THu" customClass="CategoriesCollectionViewController" customModule="OnlineFashionStoreApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -100,11 +100,63 @@
                             <outlet property="delegate" destination="dsO-Uq-THu" id="K39-WB-Ncc"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Black Star Wear" largeTitleDisplayMode="always" id="ecQ-Kr-Xb4"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="ecQ-Kr-Xb4"/>
+                    <connections>
+                        <segue destination="LkP-pH-2dj" kind="show" identifier="ToSabcategoryViewController" id="s2R-nn-6tX"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WSX-cz-6ND" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1147.5" y="-213.38028169014083"/>
+        </scene>
+        <!--Subcategories Table View Controller-->
+        <scene sceneID="hdF-S3-Vop">
+            <objects>
+                <tableViewController id="LkP-pH-2dj" customClass="SubcategoriesTableViewController" customModule="OnlineFashionStoreApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="VRu-vn-oHX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SubcategoryCell" rowHeight="96" id="pVu-26-rDC" customClass="SubcategoryTableViewCell" customModule="OnlineFashionStoreApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="320" height="96"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pVu-26-rDC" id="yKV-0E-syu">
+                                    <rect key="frame" x="0.0" y="0.0" width="294.5" height="96"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VuP-Tg-s7z">
+                                            <rect key="frame" x="20" y="19" width="44" height="62"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="VuP-Tg-s7z" firstAttribute="leading" secondItem="yKV-0E-syu" secondAttribute="leadingMargin" constant="4" id="Jgb-Mj-Qwd"/>
+                                        <constraint firstItem="VuP-Tg-s7z" firstAttribute="top" secondItem="yKV-0E-syu" secondAttribute="topMargin" constant="8" id="bht-wh-m1j"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="VuP-Tg-s7z" secondAttribute="bottom" constant="4" id="qiu-a1-DSd"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VuP-Tg-s7z" secondAttribute="trailing" constant="20" symbolic="YES" id="wRw-DY-70i"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="nameLabel" destination="VuP-Tg-s7z" id="1RS-dD-Dbs"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LkP-pH-2dj" id="fav-w1-CZI"/>
+                            <outlet property="delegate" destination="LkP-pH-2dj" id="HZd-h3-1Es"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="cYB-QC-McD">
+                        <barButtonItem key="backBarButtonItem" title="Black Star Wear" id="7nB-sJ-Y9v"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SMV-z5-DdY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1871.25" y="-213.38028169014083"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="orH-HI-XMv">
