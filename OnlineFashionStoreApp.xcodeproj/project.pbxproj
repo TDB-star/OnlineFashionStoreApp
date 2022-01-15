@@ -26,6 +26,10 @@
 		5D80BDF427918D5E00D1F65B /* SubcategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D80BDF327918D5E00D1F65B /* SubcategoryTableViewCell.swift */; };
 		5D80BDF627918D7900D1F65B /* SubcategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D80BDF527918D7900D1F65B /* SubcategoryViewModel.swift */; };
 		5D80BDF827918D8E00D1F65B /* SubcategoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D80BDF727918D8E00D1F65B /* SubcategoryCellViewModel.swift */; };
+		5D8985E427931630009E8621 /* ItemListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8985E327931630009E8621 /* ItemListCollectionViewController.swift */; };
+		5D8985E62793166B009E8621 /* ItemListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8985E52793166B009E8621 /* ItemListCollectionViewCell.swift */; };
+		5D8985E827931686009E8621 /* ItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8985E727931686009E8621 /* ItemListViewModel.swift */; };
+		5D8985EA2793169E009E8621 /* ItemListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8985E92793169E009E8621 /* ItemListCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		5D80BDF327918D5E00D1F65B /* SubcategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryTableViewCell.swift; sourceTree = "<group>"; };
 		5D80BDF527918D7900D1F65B /* SubcategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryViewModel.swift; sourceTree = "<group>"; };
 		5D80BDF727918D8E00D1F65B /* SubcategoryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubcategoryCellViewModel.swift; sourceTree = "<group>"; };
+		5D8985E327931630009E8621 /* ItemListCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListCollectionViewController.swift; sourceTree = "<group>"; };
+		5D8985E52793166B009E8621 /* ItemListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListCollectionViewCell.swift; sourceTree = "<group>"; };
+		5D8985E727931686009E8621 /* ItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModel.swift; sourceTree = "<group>"; };
+		5D8985E92793169E009E8621 /* ItemListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +92,9 @@
 			children = (
 				5D2A13A5278F094500C59F7B /* AppDelegate.swift */,
 				5D2A13A7278F094500C59F7B /* SceneDelegate.swift */,
-				5D80BDF927918D9600D1F65B /* Subcategories */,
 				5D2A13BD278F15D000C59F7B /* Categories */,
+				5D80BDF927918D9600D1F65B /* Subcategories */,
+				5D8985EB279316A8009E8621 /* ItemList */,
 				5D2A13CC278F1A2100C59F7B /* ShoppingCartViewController.swift */,
 				5D2A13C2278F165C00C59F7B /* Models.swift */,
 				5D2A13C4278F166D00C59F7B /* StorageManager.swift */,
@@ -120,6 +129,17 @@
 				5D80BDF327918D5E00D1F65B /* SubcategoryTableViewCell.swift */,
 			);
 			path = Subcategories;
+			sourceTree = "<group>";
+		};
+		5D8985EB279316A8009E8621 /* ItemList */ = {
+			isa = PBXGroup;
+			children = (
+				5D8985E727931686009E8621 /* ItemListViewModel.swift */,
+				5D8985E92793169E009E8621 /* ItemListCellViewModel.swift */,
+				5D8985E327931630009E8621 /* ItemListCollectionViewController.swift */,
+				5D8985E52793166B009E8621 /* ItemListCollectionViewCell.swift */,
+			);
+			path = ItemList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,18 +214,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D80BDF427918D5E00D1F65B /* SubcategoryTableViewCell.swift in Sources */,
+				5D8985EA2793169E009E8621 /* ItemListCellViewModel.swift in Sources */,
 				5D2A13C7278F168000C59F7B /* NetworkManager.swift in Sources */,
 				5D2A13BC278F128600C59F7B /* CategoryCollectionViewCell.swift in Sources */,
 				5D2A13A6278F094500C59F7B /* AppDelegate.swift in Sources */,
 				5D2A13C1278F164100C59F7B /* CategoryCellViewModel.swift in Sources */,
+				5D8985E427931630009E8621 /* ItemListCollectionViewController.swift in Sources */,
 				5D80BDF627918D7900D1F65B /* SubcategoryViewModel.swift in Sources */,
 				5D80BDF227918D3000D1F65B /* SubcategoriesTableViewController.swift in Sources */,
 				5D2A13BF278F162100C59F7B /* CategoryViewModel.swift in Sources */,
 				5D2A13BA278F105900C59F7B /* CategoriesCollectionViewController.swift in Sources */,
 				5D2A13A8278F094500C59F7B /* SceneDelegate.swift in Sources */,
 				5D2A13C3278F165C00C59F7B /* Models.swift in Sources */,
+				5D8985E827931686009E8621 /* ItemListViewModel.swift in Sources */,
 				5D2A13CD278F1A2100C59F7B /* ShoppingCartViewController.swift in Sources */,
 				5D2A13C5278F166D00C59F7B /* StorageManager.swift in Sources */,
+				5D8985E62793166B009E8621 /* ItemListCollectionViewCell.swift in Sources */,
 				5D80BDF827918D8E00D1F65B /* SubcategoryCellViewModel.swift in Sources */,
 				5D2A13CB278F17AD00C59F7B /* ImageManager.swift in Sources */,
 				5D2A13C9278F169800C59F7B /* CustomImageView.swift in Sources */,

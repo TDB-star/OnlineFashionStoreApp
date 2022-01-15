@@ -17,7 +17,7 @@ protocol SubcategoriesViewModelProtocol {
     func getNumberOfRows() -> Int
     func getItemsURL(at indexPath: IndexPath) -> String
     func getCellViewModel(at indexPath: IndexPath) -> SubcategoryCellViewModelProtocol
-   // func getItemsListViewModel(at indexPath: IndexPath) -> ItemsListViewModelProtocol
+    func getItemListViewModel(at indexPath: IndexPath) -> ItemListViewModelProtocol
     
 }
 
@@ -49,8 +49,8 @@ class SubcategoriesViewModel: SubcategoriesViewModelProtocol {
         return SubcategoryCellViewModel(subcategory: subcategory)
     }
     
-//    func getItemsListViewModel(at indexPath: IndexPath) -> ItemsListViewModelProtocol {
-//        let itemsID = category.subcategories[indexPath.row]
-//        return ItemsListViewModel(items: itemsID)
-//    }
+    func getItemListViewModel(at indexPath: IndexPath) -> ItemListViewModelProtocol {
+        let itemsID = category.subcategories[indexPath.row]
+        return ItemListViewModel(items: itemsID)
+    }
 }
