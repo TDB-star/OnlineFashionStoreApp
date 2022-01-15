@@ -30,6 +30,12 @@
 		5D8985E62793166B009E8621 /* ItemListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8985E52793166B009E8621 /* ItemListCollectionViewCell.swift */; };
 		5D8985E827931686009E8621 /* ItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8985E727931686009E8621 /* ItemListViewModel.swift */; };
 		5D8985EA2793169E009E8621 /* ItemListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8985E92793169E009E8621 /* ItemListCellViewModel.swift */; };
+		5D8985ED27934B6D009E8621 /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8985EC27934B6D009E8621 /* ItemDetailsViewController.swift */; };
+		5D8985EF27934B96009E8621 /* PhotoGalaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8985EE27934B96009E8621 /* PhotoGalaryCollectionViewCell.swift */; };
+		5D8985F2279350F6009E8621 /* ItemDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8985F1279350F6009E8621 /* ItemDetailsViewModel.swift */; };
+		5D8985F42793511E009E8621 /* ItemPhotoCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8985F32793511E009E8621 /* ItemPhotoCellViewModel.swift */; };
+		5D8985F6279352B8009E8621 /* ExtentionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8985F5279352B8009E8621 /* ExtentionTextField.swift */; };
+		5D8985F8279352FD009E8621 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8985F7279352FD009E8621 /* PickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +64,12 @@
 		5D8985E52793166B009E8621 /* ItemListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListCollectionViewCell.swift; sourceTree = "<group>"; };
 		5D8985E727931686009E8621 /* ItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModel.swift; sourceTree = "<group>"; };
 		5D8985E92793169E009E8621 /* ItemListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListCellViewModel.swift; sourceTree = "<group>"; };
+		5D8985EC27934B6D009E8621 /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
+		5D8985EE27934B96009E8621 /* PhotoGalaryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalaryCollectionViewCell.swift; sourceTree = "<group>"; };
+		5D8985F1279350F6009E8621 /* ItemDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewModel.swift; sourceTree = "<group>"; };
+		5D8985F32793511E009E8621 /* ItemPhotoCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemPhotoCellViewModel.swift; sourceTree = "<group>"; };
+		5D8985F5279352B8009E8621 /* ExtentionTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionTextField.swift; sourceTree = "<group>"; };
+		5D8985F7279352FD009E8621 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +107,9 @@
 				5D2A13BD278F15D000C59F7B /* Categories */,
 				5D80BDF927918D9600D1F65B /* Subcategories */,
 				5D8985EB279316A8009E8621 /* ItemList */,
+				5D8985F027934E0E009E8621 /* ItemDetails */,
 				5D2A13CC278F1A2100C59F7B /* ShoppingCartViewController.swift */,
+				5D8985F927935334009E8621 /* Helpers */,
 				5D2A13C2278F165C00C59F7B /* Models.swift */,
 				5D2A13C4278F166D00C59F7B /* StorageManager.swift */,
 				5D2A13C6278F168000C59F7B /* NetworkManager.swift */,
@@ -140,6 +154,26 @@
 				5D8985E52793166B009E8621 /* ItemListCollectionViewCell.swift */,
 			);
 			path = ItemList;
+			sourceTree = "<group>";
+		};
+		5D8985F027934E0E009E8621 /* ItemDetails */ = {
+			isa = PBXGroup;
+			children = (
+				5D8985F1279350F6009E8621 /* ItemDetailsViewModel.swift */,
+				5D8985F32793511E009E8621 /* ItemPhotoCellViewModel.swift */,
+				5D8985EC27934B6D009E8621 /* ItemDetailsViewController.swift */,
+				5D8985EE27934B96009E8621 /* PhotoGalaryCollectionViewCell.swift */,
+			);
+			path = ItemDetails;
+			sourceTree = "<group>";
+		};
+		5D8985F927935334009E8621 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				5D8985F5279352B8009E8621 /* ExtentionTextField.swift */,
+				5D8985F7279352FD009E8621 /* PickerView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,11 +250,16 @@
 				5D80BDF427918D5E00D1F65B /* SubcategoryTableViewCell.swift in Sources */,
 				5D8985EA2793169E009E8621 /* ItemListCellViewModel.swift in Sources */,
 				5D2A13C7278F168000C59F7B /* NetworkManager.swift in Sources */,
+				5D8985F2279350F6009E8621 /* ItemDetailsViewModel.swift in Sources */,
+				5D8985F42793511E009E8621 /* ItemPhotoCellViewModel.swift in Sources */,
 				5D2A13BC278F128600C59F7B /* CategoryCollectionViewCell.swift in Sources */,
+				5D8985EF27934B96009E8621 /* PhotoGalaryCollectionViewCell.swift in Sources */,
 				5D2A13A6278F094500C59F7B /* AppDelegate.swift in Sources */,
+				5D8985ED27934B6D009E8621 /* ItemDetailsViewController.swift in Sources */,
 				5D2A13C1278F164100C59F7B /* CategoryCellViewModel.swift in Sources */,
 				5D8985E427931630009E8621 /* ItemListCollectionViewController.swift in Sources */,
 				5D80BDF627918D7900D1F65B /* SubcategoryViewModel.swift in Sources */,
+				5D8985F8279352FD009E8621 /* PickerView.swift in Sources */,
 				5D80BDF227918D3000D1F65B /* SubcategoriesTableViewController.swift in Sources */,
 				5D2A13BF278F162100C59F7B /* CategoryViewModel.swift in Sources */,
 				5D2A13BA278F105900C59F7B /* CategoriesCollectionViewController.swift in Sources */,
@@ -232,6 +271,7 @@
 				5D8985E62793166B009E8621 /* ItemListCollectionViewCell.swift in Sources */,
 				5D80BDF827918D8E00D1F65B /* SubcategoryCellViewModel.swift in Sources */,
 				5D2A13CB278F17AD00C59F7B /* ImageManager.swift in Sources */,
+				5D8985F6279352B8009E8621 /* ExtentionTextField.swift in Sources */,
 				5D2A13C9278F169800C59F7B /* CustomImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

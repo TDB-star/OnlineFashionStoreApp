@@ -19,7 +19,7 @@ protocol ItemListViewModelProtocol {
     func fetchItems(completion: @escaping() -> Void)
     func getNumberOfItems() -> Int
     func getItemListCellViewModel(at indexPath: IndexPath) -> ItemListCellViewModelProtocol
-    //func getItemDetailsViewModel(at indexPath: IndexPath) -> ItemDetailsViewModelProtocol
+    func getItemDetailsViewModel(at indexPath: IndexPath) -> ItemDetailsViewModelProtocol
 }
 
 class ItemListViewModel: ItemListViewModelProtocol {
@@ -55,8 +55,8 @@ class ItemListViewModel: ItemListViewModelProtocol {
         return ItemListCellViewModel(item: items)
     }
     
-//    func getItemDetailsViewModel(at indexPath: IndexPath) -> ItemDetailsViewModelProtocol {
-//        let item = items[indexPath.row]
-//        return ItemDetailsViewModel(itemDitails: item)
-//    }
+    func getItemDetailsViewModel(at indexPath: IndexPath) -> ItemDetailsViewModelProtocol {
+        let item = items[indexPath.row]
+        return ItemDetailsViewModel(itemDitails: item)
+    }
 }
