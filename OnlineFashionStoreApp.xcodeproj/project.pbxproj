@@ -39,9 +39,11 @@
 		5DE9BD9D2794597E0074F3C2 /* ShoppingCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE9BD9C2794597E0074F3C2 /* ShoppingCartTableViewCell.swift */; };
 		5DE9BD9F27945A700074F3C2 /* ShoppingCartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE9BD9E27945A700074F3C2 /* ShoppingCartViewModel.swift */; };
 		5DE9BDA127945A890074F3C2 /* ShoppingCartCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE9BDA027945A890074F3C2 /* ShoppingCartCellViewModel.swift */; };
+		6D13D2B5BBB51CE33E25761A /* Pods_OnlineFashionStoreApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DC8C7218544D01BB683E22 /* Pods_OnlineFashionStoreApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D78AEDCE817CE8BCCA007A9 /* Pods-OnlineFashionStoreApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineFashionStoreApp.debug.xcconfig"; path = "Target Support Files/Pods-OnlineFashionStoreApp/Pods-OnlineFashionStoreApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5D2A13A2278F094500C59F7B /* OnlineFashionStoreApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnlineFashionStoreApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D2A13A5278F094500C59F7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D2A13A7278F094500C59F7B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +78,8 @@
 		5DE9BD9C2794597E0074F3C2 /* ShoppingCartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartTableViewCell.swift; sourceTree = "<group>"; };
 		5DE9BD9E27945A700074F3C2 /* ShoppingCartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewModel.swift; sourceTree = "<group>"; };
 		5DE9BDA027945A890074F3C2 /* ShoppingCartCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartCellViewModel.swift; sourceTree = "<group>"; };
+		91DC8C7218544D01BB683E22 /* Pods_OnlineFashionStoreApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnlineFashionStoreApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B46B9FDA0B40ADB00D70383 /* Pods-OnlineFashionStoreApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineFashionStoreApp.release.xcconfig"; path = "Target Support Files/Pods-OnlineFashionStoreApp/Pods-OnlineFashionStoreApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,17 +87,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6D13D2B5BBB51CE33E25761A /* Pods_OnlineFashionStoreApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3207A3C7F5E4E54BAC240ED6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91DC8C7218544D01BB683E22 /* Pods_OnlineFashionStoreApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5D2A1399278F094500C59F7B = {
 			isa = PBXGroup;
 			children = (
 				5D2A13A4278F094500C59F7B /* OnlineFashionStoreApp */,
 				5D2A13A3278F094500C59F7B /* Products */,
+				BC4B7F078A06B6FF2ACFDD82 /* Pods */,
+				3207A3C7F5E4E54BAC240ED6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,6 +208,16 @@
 			path = ShoppingCart;
 			sourceTree = "<group>";
 		};
+		BC4B7F078A06B6FF2ACFDD82 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D78AEDCE817CE8BCCA007A9 /* Pods-OnlineFashionStoreApp.debug.xcconfig */,
+				9B46B9FDA0B40ADB00D70383 /* Pods-OnlineFashionStoreApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,9 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D2A13B6278F094700C59F7B /* Build configuration list for PBXNativeTarget "OnlineFashionStoreApp" */;
 			buildPhases = (
+				C54A307B60045949FDBB350D /* [CP] Check Pods Manifest.lock */,
 				5D2A139E278F094500C59F7B /* Sources */,
 				5D2A139F278F094500C59F7B /* Frameworks */,
 				5D2A13A0278F094500C59F7B /* Resources */,
+				6B00E7E5FAAE59E5C2C90733 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -258,6 +285,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6B00E7E5FAAE59E5C2C90733 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OnlineFashionStoreApp/Pods-OnlineFashionStoreApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OnlineFashionStoreApp/Pods-OnlineFashionStoreApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OnlineFashionStoreApp/Pods-OnlineFashionStoreApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C54A307B60045949FDBB350D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OnlineFashionStoreApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5D2A139E278F094500C59F7B /* Sources */ = {
@@ -436,6 +505,7 @@
 		};
 		5D2A13B7278F094700C59F7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D78AEDCE817CE8BCCA007A9 /* Pods-OnlineFashionStoreApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -465,6 +535,7 @@
 		};
 		5D2A13B8278F094700C59F7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B46B9FDA0B40ADB00D70383 /* Pods-OnlineFashionStoreApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

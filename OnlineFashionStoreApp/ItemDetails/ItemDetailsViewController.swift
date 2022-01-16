@@ -10,7 +10,7 @@ import UIKit
 class ItemDetailsViewController: UIViewController {
 
     private let cellIdentifier = "ItemDetailsPhotoCell"
-    
+   
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var addToCartButton: UIButton!
     @IBOutlet weak var sizeTextField: UITextField!
@@ -21,6 +21,7 @@ class ItemDetailsViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var viewModel: ItemDetailsViewModelProtocol!
+    private var choisenSize = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,15 +29,40 @@ class ItemDetailsViewController: UIViewController {
         collectionView.delegate = self
         collectionView.collectionViewLayout = configureCollectionViewLayout()
         setUpUI()
-        addToCartButton.layer.cornerRadius = 4
-        addToCartButton.layer.cornerCurve = .continuous
-       
     }
     
     @IBAction func addToCartButtonPressed(_ sender: UIButton) {
+        
+        if sizeTextField.text == "" {
+            let alert = UIAlertController(title: "Пожалуйста, выберете размер", message: "", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Выбрать размер", style: .default))
+            alert.addAction(UIAlertAction(title: "Закрыть", style: .default))
+            
+            self.present(alert, animated: true, completion: nil)
+            
+        } else {
+            choisenSize = sizeTextField.text ?? ""
+            viewModel.getSelectedItem(size: choisenSize)
+            
+            let alert = UIAlertController(title: "Товар успешно добавлен в корзину", message: "", preferredStyle: .actionSheet)
+            
+            alert.addAction(UIAlertAction(title: "Перейти в корзину", style: .default, handler: { [weak self] _ in
+                let dest = self?.storyboard?.instantiateViewController(withIdentifier: "ShoppingCatViewController") as! ShoppingCartViewController
+                self?.navigationController?.pushViewController(dest, animated: true)
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Продолжить покупки", style: .default, handler: { _ in
+                alert.dismiss(animated: true, completion: nil)
+                self.navigationController?.popViewController(animated: true)
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     private func setUpUI() {
+        addToCartButton.layer.cornerRadius = 4
+        addToCartButton.layer.cornerCurve = .continuous
         nameLabel.text = viewModel.itemName
         priceLabel.text = "\((viewModel.itemPrice as NSString?)?.intValue ?? 0) ₽"
         colorLabel.text = viewModel.itemColor

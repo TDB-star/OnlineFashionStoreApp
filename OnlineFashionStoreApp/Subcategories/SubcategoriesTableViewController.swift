@@ -9,7 +9,6 @@ import UIKit
 
 class SubcategoriesTableViewController: UITableViewController {
     private let cellIdentifier = "SubcategoryCell"
-    //private let segueIdentifier = "ToItemsListViewController"
     private let storyboardIdentifier = "ItemViewController"
     
     var viewModel: SubcategoriesViewModelProtocol!

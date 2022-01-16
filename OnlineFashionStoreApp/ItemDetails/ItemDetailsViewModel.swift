@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ItemDetailsViewModelProtocol {
-    
+    var selectedItem: SelectedItem { get }
     var itemName: String { get }
     var itemPrice: String { get }
     var itemColor: String { get }
@@ -16,19 +16,18 @@ protocol ItemDetailsViewModelProtocol {
     var itemMainImageData: Data? { get }
     var imageUrl: String { get }
    
-    //var selectedItem: SelectedItem { get }
-    
     init(itemDitails: Product)
+    
     func getItemPhotos() -> Int
     func getArrayOfSizes() -> [String]
     func getItemPhotoCarouselCellViewModel(at indexPath: IndexPath) -> ItemPhotoCarouselCellViewModelProtocol
-    //func getSelectedItem(size: String) -> SelectedItem
+    func getSelectedItem(size: String) //-> SelectedItem
    
 }
 
 class ItemDetailsViewModel: ItemDetailsViewModelProtocol {
 
-    //var selectedItem = SelectedItem()
+    var selectedItem = SelectedItem()
 
     var itemName: String {
         item.name ?? ""
@@ -74,13 +73,12 @@ class ItemDetailsViewModel: ItemDetailsViewModelProtocol {
         return ItemPhotoCarouselCellViewModel(image: photos)
     }
     
-//    func getSelectedItem(size: String) -> SelectedItem {
-//        selectedItem.itemName = item.name ?? ""
-//        selectedItem.itemColor = item.colorName ?? ""
-//        selectedItem.itemPrice = item.price
-//        selectedItem.Image = itemMainImageData
-//        selectedItem.itemSize = size
-//        StorageManager.shared.write(selectedItem)
-//        return selectedItem
-//    }
+     func getSelectedItem(size: String) {
+        selectedItem.itemName = item.name ?? ""
+        selectedItem.itemColor = item.colorName ?? ""
+        selectedItem.itemPrice = item.price
+        selectedItem.Image = itemMainImageData
+        selectedItem.itemSize = size
+        StorageManager.shared.write(selectedItem)
+    }
 }
