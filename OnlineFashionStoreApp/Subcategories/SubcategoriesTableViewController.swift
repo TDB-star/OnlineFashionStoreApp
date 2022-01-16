@@ -17,6 +17,8 @@ class SubcategoriesTableViewController: UITableViewController {
         super.viewDidLoad()
 
         title = viewModel.navigationBarTitle
+       // navigationItem.backButtonTitle = "Black Star Wear"
+        navigationItem.setHidesBackButton(true, animated: false)
     }
 
 

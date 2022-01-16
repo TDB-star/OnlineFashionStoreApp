@@ -293,9 +293,7 @@
                             <outlet property="delegate" destination="LkP-pH-2dj" id="HZd-h3-1Es"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="cYB-QC-McD">
-                        <barButtonItem key="backBarButtonItem" title="Black Star Wear" id="7nB-sJ-Y9v"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="cYB-QC-McD"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SMV-z5-DdY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -324,7 +322,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bTd-yV-zmm" customClass="CustomImageView" customModule="OnlineFashionStoreApp" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="166" height="195"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="166" height="203"/>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="4Qu-Xo-eXW">
                                             <rect key="frame" x="8" y="203" width="150" height="71"/>
@@ -357,7 +355,7 @@
                                         <constraint firstAttribute="bottom" secondItem="4Qu-Xo-eXW" secondAttribute="bottom" id="LH9-Ks-ItZ"/>
                                         <constraint firstAttribute="trailing" secondItem="bTd-yV-zmm" secondAttribute="trailing" id="NR6-M8-g3P"/>
                                         <constraint firstItem="4Qu-Xo-eXW" firstAttribute="leading" secondItem="AhW-Vt-Sil" secondAttribute="leading" constant="8" id="j9u-km-EyS"/>
-                                        <constraint firstItem="4Qu-Xo-eXW" firstAttribute="top" secondItem="bTd-yV-zmm" secondAttribute="bottom" constant="8" id="leT-70-OUa"/>
+                                        <constraint firstItem="4Qu-Xo-eXW" firstAttribute="top" secondItem="bTd-yV-zmm" secondAttribute="bottom" id="leT-70-OUa"/>
                                         <constraint firstItem="bTd-yV-zmm" firstAttribute="top" secondItem="AhW-Vt-Sil" secondAttribute="top" id="pXR-nX-tmZ"/>
                                     </constraints>
                                 </collectionViewCellContentView>
