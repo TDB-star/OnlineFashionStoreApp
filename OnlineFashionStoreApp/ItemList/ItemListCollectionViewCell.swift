@@ -22,4 +22,9 @@ class ItemListCollectionViewCell: UICollectionViewCell {
             priceLabel.text = "\((viewModel.price as NSString?)?.intValue ?? 0) ₽"
         }
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        itemImageView.image = nil
+    }
 }

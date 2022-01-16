@@ -21,4 +21,9 @@ class CategoryCollectionViewCell: UICollectionViewCell {
             categoryImageView.contentMode = .scaleAspectFill
         }
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        categoryImageView.image = nil
+    }
 }
