@@ -10,7 +10,7 @@ import UIKit
 class ItemListCollectionViewController: UICollectionViewController {
     
     private let cellIdentifier = "ItemCollectionViewCell"
-   // private let segueIdentifier = "ToItemDetailsViewController"
+    private let storyboardIdentifier = "ToItemDetailsViewController"
     private let sectionInsets = UIEdgeInsets(top: 20, left: 10, bottom: 20, right: 10)
     private let itemsPerRow: CGFloat = 2
     
@@ -37,6 +37,14 @@ class ItemListCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! ItemListCollectionViewCell
         cell.viewModel = viewModel.getItemListCellViewModel(at: indexPath)
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        let vc = storyboard.instantiateViewController(identifier: storyboardIdentifier) as! ItemDetailsViewController
+        vc.viewModel = viewModel.getItemDetailsViewModel(at: indexPath)
+        navigationController?.pushViewController(vc, animated: true)
+        collectionView.deselectItem(at: indexPath, animated: true)
     }
 }
 

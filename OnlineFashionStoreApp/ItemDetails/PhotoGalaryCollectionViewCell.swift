@@ -11,4 +11,12 @@ class PhotoGalaryCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var itemImageView: CustomImageView!
     
+    var viewModel: ItemPhotoCarouselCellViewModelProtocol! {
+        didSet {
+            itemImageView.fetchImage(from: viewModel.imageUrl)
+            itemImageView.clipsToBounds = true
+            itemImageView.contentMode = .scaleAspectFill
+        }
+    }
+    
 }

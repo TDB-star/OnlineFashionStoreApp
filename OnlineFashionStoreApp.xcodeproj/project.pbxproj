@@ -114,7 +114,6 @@
 				5D2A13C4278F166D00C59F7B /* StorageManager.swift */,
 				5D2A13C6278F168000C59F7B /* NetworkManager.swift */,
 				5D2A13CA278F17AD00C59F7B /* ImageManager.swift */,
-				5D2A13C8278F169800C59F7B /* CustomImageView.swift */,
 				5D2A13AB278F094500C59F7B /* Main.storyboard */,
 				5D2A13AE278F094700C59F7B /* Assets.xcassets */,
 				5D2A13B0278F094700C59F7B /* LaunchScreen.storyboard */,
@@ -170,6 +169,7 @@
 		5D8985F927935334009E8621 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				5D2A13C8278F169800C59F7B /* CustomImageView.swift */,
 				5D8985F5279352B8009E8621 /* ExtentionTextField.swift */,
 				5D8985F7279352FD009E8621 /* PickerView.swift */,
 			);
