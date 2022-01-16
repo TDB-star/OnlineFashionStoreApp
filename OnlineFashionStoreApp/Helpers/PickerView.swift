@@ -8,7 +8,6 @@
 import UIKit
 
 class MyPickerView : UIPickerView, UIPickerViewDataSource, UIPickerViewDelegate {
-
     var pickerData : [String]!
     var pickerTextField : UITextField!
     var textFieldValue: String?

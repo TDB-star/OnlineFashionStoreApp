@@ -15,13 +15,10 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     var viewModel: CategoryCellViewModelProtocol! {
         didSet {
         nameLabel.text = viewModel.categoryName
-//                       guard let imageData = viewModel.imageData else { return }
-//                      categoryImageView.image = UIImage(data: imageData)
             categoryImageView.fetchImage(from: viewModel.imageUrl)
             categoryImageView.layer.cornerRadius = categoryImageView.frame.size.width / 2
             categoryImageView.clipsToBounds = true
             categoryImageView.contentMode = .scaleAspectFill
-            
         }
     }
 }

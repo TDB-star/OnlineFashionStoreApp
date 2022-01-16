@@ -37,8 +37,6 @@
 		5D8985F6279352B8009E8621 /* ExtentionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8985F5279352B8009E8621 /* ExtentionTextField.swift */; };
 		5D8985F8279352FD009E8621 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8985F7279352FD009E8621 /* PickerView.swift */; };
 		5DE9BD9D2794597E0074F3C2 /* ShoppingCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE9BD9C2794597E0074F3C2 /* ShoppingCartTableViewCell.swift */; };
-		5DE9BD9F27945A700074F3C2 /* ShoppingCartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE9BD9E27945A700074F3C2 /* ShoppingCartViewModel.swift */; };
-		5DE9BDA127945A890074F3C2 /* ShoppingCartCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE9BDA027945A890074F3C2 /* ShoppingCartCellViewModel.swift */; };
 		6D13D2B5BBB51CE33E25761A /* Pods_OnlineFashionStoreApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91DC8C7218544D01BB683E22 /* Pods_OnlineFashionStoreApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,8 +74,6 @@
 		5D8985F5279352B8009E8621 /* ExtentionTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionTextField.swift; sourceTree = "<group>"; };
 		5D8985F7279352FD009E8621 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		5DE9BD9C2794597E0074F3C2 /* ShoppingCartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartTableViewCell.swift; sourceTree = "<group>"; };
-		5DE9BD9E27945A700074F3C2 /* ShoppingCartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewModel.swift; sourceTree = "<group>"; };
-		5DE9BDA027945A890074F3C2 /* ShoppingCartCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartCellViewModel.swift; sourceTree = "<group>"; };
 		91DC8C7218544D01BB683E22 /* Pods_OnlineFashionStoreApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnlineFashionStoreApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B46B9FDA0B40ADB00D70383 /* Pods-OnlineFashionStoreApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnlineFashionStoreApp.release.xcconfig"; path = "Target Support Files/Pods-OnlineFashionStoreApp/Pods-OnlineFashionStoreApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,10 +127,7 @@
 				5D8985F027934E0E009E8621 /* ItemDetails */,
 				5DE9BDA227945A930074F3C2 /* ShoppingCart */,
 				5D8985F927935334009E8621 /* Helpers */,
-				5D2A13C2278F165C00C59F7B /* Models.swift */,
-				5D2A13C4278F166D00C59F7B /* StorageManager.swift */,
-				5D2A13C6278F168000C59F7B /* NetworkManager.swift */,
-				5D2A13CA278F17AD00C59F7B /* ImageManager.swift */,
+				5DE9BDA32794765E0074F3C2 /* Services */,
 				5D2A13AB278F094500C59F7B /* Main.storyboard */,
 				5D2A13AE278F094700C59F7B /* Assets.xcassets */,
 				5D2A13B0278F094700C59F7B /* LaunchScreen.storyboard */,
@@ -200,12 +193,21 @@
 		5DE9BDA227945A930074F3C2 /* ShoppingCart */ = {
 			isa = PBXGroup;
 			children = (
-				5DE9BD9E27945A700074F3C2 /* ShoppingCartViewModel.swift */,
-				5DE9BDA027945A890074F3C2 /* ShoppingCartCellViewModel.swift */,
 				5D2A13CC278F1A2100C59F7B /* ShoppingCartViewController.swift */,
 				5DE9BD9C2794597E0074F3C2 /* ShoppingCartTableViewCell.swift */,
 			);
 			path = ShoppingCart;
+			sourceTree = "<group>";
+		};
+		5DE9BDA32794765E0074F3C2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5D2A13C2278F165C00C59F7B /* Models.swift */,
+				5D2A13CA278F17AD00C59F7B /* ImageManager.swift */,
+				5D2A13C6278F168000C59F7B /* NetworkManager.swift */,
+				5D2A13C4278F166D00C59F7B /* StorageManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		BC4B7F078A06B6FF2ACFDD82 /* Pods */ = {
@@ -214,7 +216,6 @@
 				4D78AEDCE817CE8BCCA007A9 /* Pods-OnlineFashionStoreApp.debug.xcconfig */,
 				9B46B9FDA0B40ADB00D70383 /* Pods-OnlineFashionStoreApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -347,10 +348,8 @@
 				5D80BDF627918D7900D1F65B /* SubcategoryViewModel.swift in Sources */,
 				5D8985F8279352FD009E8621 /* PickerView.swift in Sources */,
 				5D80BDF227918D3000D1F65B /* SubcategoriesTableViewController.swift in Sources */,
-				5DE9BDA127945A890074F3C2 /* ShoppingCartCellViewModel.swift in Sources */,
 				5D2A13BF278F162100C59F7B /* CategoryViewModel.swift in Sources */,
 				5D2A13BA278F105900C59F7B /* CategoriesCollectionViewController.swift in Sources */,
-				5DE9BD9F27945A700074F3C2 /* ShoppingCartViewModel.swift in Sources */,
 				5D2A13A8278F094500C59F7B /* SceneDelegate.swift in Sources */,
 				5D2A13C3278F165C00C59F7B /* Models.swift in Sources */,
 				5DE9BD9D2794597E0074F3C2 /* ShoppingCartTableViewCell.swift in Sources */,

@@ -17,10 +17,8 @@ class SubcategoriesTableViewController: UITableViewController {
         super.viewDidLoad()
 
         title = viewModel.navigationBarTitle
-       // navigationItem.backButtonTitle = "Black Star Wear"
         navigationItem.setHidesBackButton(true, animated: false)
     }
-
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     viewModel.getNumberOfRows()

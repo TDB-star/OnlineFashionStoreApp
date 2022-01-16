@@ -19,7 +19,6 @@ class ShoppingCartViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = footerView
@@ -51,7 +50,9 @@ extension ShoppingCartViewController: UITableViewDataSource {
         cell.cofigure(with: item)
         return cell
     }
-    
+}
+
+extension ShoppingCartViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
@@ -64,16 +65,13 @@ extension ShoppingCartViewController: UITableViewDataSource {
             getItemsFromDataBase()
         }
     }
-}
-
-extension ShoppingCartViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         80
     }
 }
 
 extension ShoppingCartViewController {
-    
     private func getItemsFromDataBase() {
         StorageManager.shared.read { items in
             self.allItems = Array(items)
@@ -83,7 +81,6 @@ extension ShoppingCartViewController {
     }
     
     private func updateTotalLabels(_ isEmpty: Bool) {
-        
         if isEmpty {
             numberOfItemsLabel.text = "0"
             totalPriceLabel.text = calculateTotalPrice()
@@ -101,5 +98,4 @@ extension ShoppingCartViewController {
         }
         return "Итого: \(totalPrice) ₽"
     }
-    
 }
