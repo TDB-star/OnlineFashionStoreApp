@@ -31,7 +31,6 @@ extension UITextField {
         iconView.tintColor = .lightGray
         iconView.contentMode = .scaleAspectFit
        
-          
         let iconContainerView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 45, height: 45))
         iconContainerView.addSubview(iconView)
         rightViewMode = .always

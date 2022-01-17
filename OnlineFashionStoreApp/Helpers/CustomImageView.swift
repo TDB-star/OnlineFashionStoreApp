@@ -14,18 +14,18 @@ class CustomImageView: UIImageView {
             image = UIImage(systemName: "eye")
             return
         }
-        // Берём изображение из кэша, если оно там есть
+        // Taking the image from the cache
         
         if let cachedImage = getCachedImage(from: imageURL) {
             image = cachedImage
             return
         }
-        // если изображения нет, то загружаем из сети
+        // If there is no image, we download it from the network
         
         ImageManager.shared.fetchImageDataToCache(from: imageURL) { data, response in
             self.image = UIImage(data: data)
             
-        // сохраняем изображение в кэш
+        // Save the image to the cache
             
             self.saveDataToCache(with: data, and: response)
         }
