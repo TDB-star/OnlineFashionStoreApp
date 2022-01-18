@@ -8,6 +8,6 @@
 - MVVM
 
 ### Screenshots
-![](Sceenshots/1.png)
+![](Screenshots/1.png)
 
 
