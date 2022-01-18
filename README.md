@@ -7,6 +7,6 @@
 - JSON (URLSession)
 - MVVM
 
-### Screenshorts
+### Screenshots
 
 
